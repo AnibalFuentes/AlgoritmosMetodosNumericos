@@ -9,9 +9,9 @@
 function FIJO(x0, es, imax, gx)
     xr = x0;
     iter = 0;
-    g = str2func(['@(x)' gx]);
+    g = str2func(['@(x)', gx]);
     do = 0;
-    fprintf(' iteracion Resultado error\n')
+    fprintf(' iteracion   Resultado   error\n')
     while (do == 0)
         xrold = xr;
         xr = g(xrold);
@@ -19,12 +19,13 @@ function FIJO(x0, es, imax, gx)
         if (xr ~= 0)
             ea = abs((xr - xrold) / xr) * 100;
         end
-        fprintf(' %4.0f %4.4f %4.4f\n', iter, xr, ea)
+        fprintf(' %4.0f       %4.4f     %4.4f\n', iter, xr, ea)
         if ((ea < es) || (iter >= imax))
             break;
         end
     end
 end
+
 
 ```
 
