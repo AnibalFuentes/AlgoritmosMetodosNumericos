@@ -1,4 +1,4 @@
-#AlgoritmosMetodosNunericos
+# AlgoritmosMetodosNunericos
 
 ´´´ function FIJO(x0, es, imax, gx)
 xr = x0;
@@ -18,4 +18,4 @@ if ((ea < es) || (iter >= imax))
 break;
 end
 end
-end´´´
+end ´´´
